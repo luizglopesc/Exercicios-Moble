@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Viagens</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let viagem of viagens">
+    <ion-card>{{viagem.local}}</ion-card>
+    <ion-card>{{viagem.descricao}}</ion-card>
+    <ion-card>{{viagem.data}}</ion-card>
+  </ion-card>
+
+</ion-content>
