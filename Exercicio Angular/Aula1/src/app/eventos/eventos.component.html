@@ -1,0 +1,26 @@
+<div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <h1>Parabéns!</h1>
+    <h4>Seu componente está sendo exibido em tela</h4>
+    <hr>
+    <h5>Como aparece o seu evento abaixo?</h5>
+    <div *ngFor="let event of evento">
+        <div style="margin-top:30px">
+            Evento:{{ event.name }}
+
+        </div>
+        <div>
+            Data:{{ event.date }}
+
+        </div>
+        <div>
+            Hora:{{ event.time }}
+        </div>
+        <div>
+            <app-address *ngIf="event.location" (atualizarEndereco)="receberEnderecoAtualizado($event)"
+                [location]="event.location"></app-address>
+        </div>
+
+    </div>
